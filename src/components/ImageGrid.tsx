@@ -1,10 +1,17 @@
 import React from "react";
 import ImageCard from "./ImageCard";
+import IGalleryList from "../models/IGalleryList";
 
-export default function ImageGrid() {
+interface Props {
+  galleryList: IGalleryList[];
+}
+
+export default function ImageGrid({ galleryList }: Props) {
   return (
     <div>
-      <ImageCard />
+      {galleryList.map((p) => (
+        <ImageCard myDetails={p} />
+      ))}
     </div>
   );
 }
