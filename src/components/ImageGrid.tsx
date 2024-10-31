@@ -8,7 +8,7 @@ interface Props {
 
 export default function ImageGrid({ galleryList }: Props) {
   return (
-    <div>
+    <div className="grid">
       {galleryList.map((p) => (
         <ImageCard myDetails={p} />
       ))}

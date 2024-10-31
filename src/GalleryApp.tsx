@@ -29,7 +29,7 @@ export default function GalleryApp() {
   const [id, setId] = useState("");
   const data = async () => {
     const myData = await fetch(
-      `https://api.unsplash.com/photos?page=1&count=20&client_id=Ivo353OjdV9bOQDtL6dUbeCJ_rLzWXdfK7USn0oXnS8`
+      `https://api.unsplash.com/photos?page=1&count=20&client_id=FTqLV4oa9YKfyryBjfcl1KyHPKj1T6xjxiqHCT-ZDUg`
     );
     const strData = await myData.json();
     const ourData = strData.reduce((myList: [], item: any) => {
@@ -47,13 +47,11 @@ export default function GalleryApp() {
   };
 
   return (
-    <div>
-      {galleryList.map((p) => (
-        <img src={p.url}></img>
-      ))}
-      <p>flknnsdflk</p>
+    <div className="app">
+
+
       <ImageGrid galleryList={galleryList} />
-      <ImageDetails />
+       
     </div>
   );
 }
